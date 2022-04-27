@@ -12,7 +12,8 @@
 # Comandi
   flutter create "nome dell'app"
   flutter run
-
+  sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+  sudo xcodebuild -runFirstLaunch
 
 # Appunti
   1. In una dichiarazione del costruttore di una classe, i parametri possono divenire opzionali se messi in parentesi graffe:
@@ -92,3 +93,7 @@
     1. SingleChildScrollView permette di rendere Scrollabile un determinato container. Influenza su tutti i child sotto di sè.
     2. ListView puoi decidere dove scrollare ed è infinito, senza limiti.
       1. Se usato con il builder, renderizza solamente ciò che è visibile.
+
+  9. MediaQuery.of(context).size serve per accedere dinamicamente alle dimensione dello schermo
+    1. app_bar.preferredSize.height - MediaQuery.of(context).padding.top -> Altezza della barra superiore del telefono
+    2. SafeArea(child: ...) -> Sopratutto su IOS fa in modo che il child non sia posizionato negli spazi inutilizzabili di un iphone (tipo barra superiore oppure la barra inferiore)
